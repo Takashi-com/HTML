@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/*記事*/
+.article h1 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.article p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
