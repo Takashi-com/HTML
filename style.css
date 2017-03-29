@@ -377,6 +377,70 @@ body {
     margin-left: 10px;
 }
 
+/* バッジ */
+.badge {
+    width: 120px;
+    height: 120px;
+    padding-top: 25px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 60px;
+    background-color: #00a0e9;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 0 4px #aaaaaa;
+}
+.badge i {
+    display: block;
+    font-size: 40px;
+}
+/* バッジの表示位置 */
+.pickup {
+    position: relative;
+}
+.badge {
+    position: absolute;
+    top: 44%;
+    right: -15px;
+}
+
+/* ページネーション */
+.pagenation {
+    text-align: center;
+}
+.pagenation ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.pagenation li a {
+    display: block;
+    margin-left: 5px;
+    padding-right: 5px;
+    padding: 5px 10px;
+    border: solid 1px #aaaaaa;
+    color: #000000;
+    font-size: 14px;
+    text-decoration: none;
+}
+.pagenation li a.active {
+    background-color: #cccccc;
+}
+.pagenation li a:hover {
+    background-color: #eeeeee;
+}
+.pagenation ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.pagenation li {
+    float: left;
+    width: auto;
+}
+
 /* コピーライト */
 .copyright p {
     margin: 0;
@@ -418,6 +482,18 @@ body {
 
 /* ########### 599px以下 ###########  */
 @media (max-width: 599px) {
+    /* バッジ */
+    .badge {
+        -ms-transform: scale(0.5);
+        -ms-transform-origin: right top;
+        -webkit-transform: scale(0.5);
+        -webkit-transform-origin: right top;
+        transform: scale(0.5);
+        transform-origin: right top;
+        top: -8px;
+        right: 10px;
+    }
+
     /* ナビゲーション */
     .menu li a {
         padding: 10px 3px;
@@ -488,6 +564,12 @@ body {
 
 /* ########### 600px以上〜767px以下 ###########  */
 @media (min-width: 600px) and (max-width: 767px) {
+    /* バッジの表示位置 */
+    .badge {
+        top: 30%;
+        right: 15px;
+    }
+
     /* BOX4-1 と BOX4-2 を横に並べる設定 */
     .box4:after {
         content: "";
