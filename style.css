@@ -19,33 +19,6 @@ body {
     border: none;
 }
 
-/* ナビゲーション */
-.menu ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-.menu li a {
-    display: block;
-    padding: 10px 15px;
-    /*color: #ffffff;*/
-    color: #000000;
-    font-size: 14px;
-    text-decoration: none;
-}
-.menu li a:hover {
-    background-color: #eeeeee;
-}
-.menu ul:after {
-    content: "";
-    display: block;
-    clear: both;
-}
-.menu li {
-    float: left;
-    width: auto;
-}
-
 /* ヘッダー画像 */
 .topimg {
     max-width: 100%;
@@ -274,6 +247,15 @@ body {
 }*/
 
 
+/* ######### 359px以下 ######### */
+@media (max-width: 359px) {
+    /* サイト名 */
+    .site img {
+        width: 225px;
+        height: auto;
+    }
+}
+
 /* ######### 599px以下 ######### */
 @media (max-width: 599px) {
     /* ナビゲーション */
@@ -289,8 +271,95 @@ body {
     }
 }
 
+/* ######### 768px以下 ######### */
+@media (max-width: 767px) {
+    /* トグルボタン */
+    #menubtn {
+        padding: 6px 12px;
+        border: solid 1px #aaaaaa;
+        border-radius: 5px;
+        background-color: #ffffff;
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        cursor: pointer;
+    }
+    #menubtn:hover {
+        background-color: #dddddd;
+    }
+    #menubtn:focus {
+        outline: none;
+    }
+    #menubtn i {
+        color: #888888;
+        font-size: 18px;
+    }
+    #menubtn span {
+        /* displayを「none」と指定して非表示にした場合、音声ブラウザで読み上げられないケースが出てきているため「text-indent」を使用 */
+        display: inline-block;
+        text-indent: -9999px;
+    }
+
+    /* ナビゲーションメニュー (縦並び) */
+    .menu {
+        display: none;
+    }
+    .menu ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .menu li a {
+        display: block;
+        padding: 5px;
+        color: #000000;
+        font-size: 14px;
+        text-decoration: none;
+    }
+    .menu li a:hover {
+        background-color: #eeeeee;
+    }
+}
+
 /* ######### 768px以上 ######### */
 @media (min-width: 768px) {
+    /* トグルボタン */
+    #menubtn {
+        display: none;
+    }
+
+    /* ナビゲーション */
+    #menu {
+        /* トグルボタンでナビゲーションメニューを非表示にして
+        画面を大きくすると、非表示のままとなるのを防ぐ */
+        display: block !important;
+    }
+    .menu ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .menu li a {
+        display: block;
+        padding: 10px 15px;
+        /*color: #ffffff;*/
+        color: #000000;
+        font-size: 14px;
+        text-decoration: none;
+    }
+    .menu li a:hover {
+        background-color: #eeeeee;
+    }
+    .menu ul:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .menu li {
+        float: left;
+        width: auto;
+    }
+
     /* BOX1 と BOX2 を横に並べる設定 */
     .boxA:after {
         content: "";
